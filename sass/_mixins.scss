@@ -1,0 +1,47 @@
+@mixin box-sizing( $sizing:"border-box" ) {
+	box-sizing: #{$sizing};
+	-ms-box-sizing: #{$sizing};
+	-moz-box-sizing: #{$sizing};
+	-webkit-box-sizing: #{$sizing};
+}
+
+@mixin placeholder {
+  	&::-webkit-input-placeholder {@content}
+  	&:-moz-placeholder           {@content}
+  	&::-moz-placeholder          {@content}
+  	&:-ms-input-placeholder      {@content}  
+}
+
+@mixin transition( $arguments... ) {
+	transition: $arguments;
+	-ms-transition: $arguments;
+	-moz-transition: $arguments;
+	-webkit-transition: $arguments;
+}
+
+@mixin transition-delay( $arguments ) {
+	transition-delay: $arguments;
+	-ms-transition-delay: $arguments;
+	-moz-transition-delay: $arguments;
+	-webkit-transition-delay: $arguments;
+}
+
+@mixin transform( $arguments ) {
+	transform: $arguments;
+	-ms-transform: $arguments;
+	-moz-transform: $arguments;
+	-webkit-transform: $arguments;
+}
+@mixin transform-origin( $arguments ) {
+	transform-origin: $arguments;
+	-ms-transform-origin: $arguments;
+	-moz-transform-origin: $arguments;
+	-webkit-transform-origin: $arguments;
+}
+
+@mixin box-shadow( $arguments ) {
+	box-shadow: $arguments;
+	-ms-box-shadow: $arguments;
+	-moz-box-shadow: $arguments;
+	-webkit-box-shadow: $arguments;
+}

@@ -1,0 +1,26 @@
+.popup{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .5s;
+	//transform-origin: center center;
+	//transform: translate(-100%,0%);
+	&.active{
+		opacity: 1;
+		visibility: visible;
+		//transform: translate(0%,0%);
+	}
+	button{
+		background: orange;
+		width: 100px;
+		height: 50px;
+	}
+}
+#popup-table{
+	background-color: #414042;
+}
