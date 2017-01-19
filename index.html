@@ -272,8 +272,10 @@
 								<figure>
 									<img src="images/modules/14.jpg" alt="Introduction to Functions"/>
 									<figcaption>
-										<p>Introduction to Functions</p>
-										<a href="#" class="cta-topics">See topics</a>
+										<div class="item-overlay">
+											<p>Introduction to Functions</p>
+											<a href="#" class="cta-topics">See topics</a>
+										</div>
 									</figcaption>
 								</figure>
 						  </div>
@@ -281,8 +283,10 @@
 								<figure>
 									<img src="images/modules/15.jpg" alt="Solving Systems of Linear Equations"/>
 									<figcaption>
-										<p>Solving Systems of Linear Equations</p>
-										<a href="#" class="cta-topics">See topics</a>
+										<div class="item-overlay">
+											<p>Solving Systems of Linear Equations</p>
+											<a href="#" class="cta-topics">See topics</a>
+										</div>
 									</figcaption>
 								</figure>
 						  </div>  
@@ -348,9 +352,9 @@
 						  </div>  
 					</div>
 					<div class="see-topics" id="topics">
-						<div class="topics-box">
-							<span class="icon-browser"></span>
-							<p>SEE TOPICS FOR ALL MODULES</p>
+						<div class="topics-box" onclick="javascript:MATHS.Popup.open('popup-table');">
+								<span class="icon-browser"></span>
+								<p>SEE TOPICS FOR ALL MODULES</p>
 						</div>
 					</div>
 				</div>
@@ -452,12 +456,181 @@
 				<div class="popup-header">
 					<div class="container">
 						<div class="row-inner">
-							<div class="pull-right"><button onclick="download('files/Final_Version_Curriculum-Real_World_of_Mathematics.xlsx')"><span class="icon-download"></span></button></div>
-							<div class="col6"></div>
+							<div class="col12">
+								<div class="pull-right">
+									<button onclick="javascript:MATHS.download('files/Final_Version_Curriculum-Real_World_of_Mathematics.xlsx');">
+										<span class="icon-download"></span>
+										download
+									</button>
+									<span class="icon-close" onclick="javascript:MATHS.Popup.close('popup-table');"></span>
+								</div>
+							</div>
+							<div class="col4">
+								<p>Topics by module</p>
+							</div>
+							<div class="col8">
+								<p>Topics covered by course</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="popup-content"></div>
+				<div class="popup-content">
+					<div class="container">
+						<div class="row-inner">
+							<div class="col12">
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th colspan="3"></th>
+												<th>Pre-Algebra</th>
+												<th>Elementary Algebra</th>
+												<th>Intermediate Algebra</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td colspan="6">
+													<p class="table-title">Module 1: Whole Numbers</p>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3">Introduction to whole numbers</td>
+												<td>X</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Rules of rounding</td>
+												<td>X</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Addition of whole numbers; estimation</td>
+												<td>X</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Subtraction of whole numbers</td>
+												<td>X</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Multiplication of whole numbers</td>
+												<td>X</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Division of whole numbers</td>
+												<td>X</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Exponent rules</td>
+												<td>X</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Order of operations with whole numbers</td>
+												<td>X</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="6">
+													<p class="table-title">Module 2: Introduction to Algebra </p>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3">Introduction to variables and expressions</td>
+												<td>X</td>
+												<td>X</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Identifying and combining like terms</td>
+												<td>X</td>
+												<td>X</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">The distributive property</td>
+												<td>X</td>
+												<td>X</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Simplification of expressions</td>
+												<td>X</td>
+												<td>X</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Evaluation of expressions</td>
+												<td>X</td>
+												<td>X</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Translating english to algebraic expressions</td>
+												<td>X</td>
+												<td>X</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="6">
+													<p class="table-title">Module 3: Equations</p>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3">Verifying solutions to equations</td>
+												<td>X</td>
+												<td>X</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Using addition/subtraction to solve equations</td>
+												<td>X</td>
+												<td>X</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Using multiplication/division to solve equations</td>
+												<td>X</td>
+												<td>X</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Using two steps to solve equations</td>
+												<td>X</td>
+												<td>X</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Using multiple steps to solve equations</td>
+												<td>X</td>
+												<td>X</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3">Translating english to algebraic equations</td>
+												<td>X</td>
+												<td>X</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

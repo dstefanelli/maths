@@ -7,20 +7,72 @@
 	z-index: 100;
 	opacity: 0;
 	visibility: hidden;
-	transition: all .5s;
-	//transform-origin: center center;
-	//transform: translate(-100%,0%);
+	@include transition(all .5s);
+	.popup-overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1001;
+		@include transition( all 0.3s);
+	}
 	&.active{
 		opacity: 1;
 		visibility: visible;
-		//transform: translate(0%,0%);
 	}
-	button{
-		background: orange;
-		width: 100px;
-		height: 50px;
-	}
+	
 }
 #popup-table{
 	background-color: #414042;
+	.popup-header{
+		p {
+			text-align: center;
+			color: #fff;
+			text-transform: uppercase;
+			font-size: 17px;
+			font-weight: bold;
+		}
+		button{
+			color: $color-sec;
+			display: inline-block;
+			position: relative;
+			top: -13px;
+			font-size: 23px;
+			font-weight: bold;
+			line-height: 40px;
+		}
+	}
+	.popup-content{
+		padding-bottom: 20px;
+		overflow: auto;
+		height: calc(90vh - 120px);
+		.table-responsive{
+			width: 100%;
+			overflow-y: hidden;
+    		overflow-x: auto;
+		}
+		.table{
+			width: 100%;
+			color: #fff;
+			font-size: 14px;
+			line-height: 36px;
+			font-weight: bold;
+			tbody{
+				tr td + td{
+					text-align: center;
+				}
+			}
+		}
+		.table-title {
+			line-height: 1;
+			font-size: 16px;
+			font-weight: 900;
+			color: $color-sec;
+			padding: 15px;
+			border-top: 1px solid #FFF;
+			border-bottom: 1px solid #FFF;
+			margin: 15px 0;
+		}
+	}
 }
