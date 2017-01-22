@@ -9,6 +9,9 @@ logs
 #SASS
 .sass-cache
 
+#NODE MODULES
+.node-modules
+
 #MAC FILES
 .DS_Store
 

@@ -190,7 +190,7 @@
 		color: #fff;
 		text-align: center;
 		font-weight: 600;
-		font-size: 1.5em;
+		font-size: 18px;
 		line-height: 120%;
 		background-color: rgba(0,0,0,.65);
 		-webkit-transition: all 1s;
@@ -198,15 +198,13 @@
 		-ms-transition: all 1s;
 		transition: all 1s;
 		opacity: 0;
-		padding: 30px;
 		&:hover{
 			opacity: 1;
-			&::before{
+			.grid-overlay{
 				border-color: #fff;
 			}
 		}
-		&::before {
-			content: "";
+		.grid-overlay {
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -218,6 +216,14 @@
 			transition-property: border-color;
 			transition-delay: .25s;
 			transition-timing-function: ease;
+			> div{
+				position: absolute;
+				top: 50%;
+				transform: translate(0,-50%);
+				width: 100%;
+				padding: 0 5px;
+				@include box-sizing;
+			}
 		}
 		p{
 			margin: 0 0 10px;
