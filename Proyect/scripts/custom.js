@@ -17,11 +17,10 @@ MATHS.Popup.close = function (id, callback) {
 		callback();
 	}
 }
-MATHS.Modules = function (id) {}
 MATHS.download = function (file) {
 	document.location = file;
 }
-MATHS.init = function () {
+MATHS.init = function ( id ) {
 	var $header = $(".site-header")
 		, $menu = $(".menu")
 		, $nav = $(".site-nav")
@@ -29,6 +28,30 @@ MATHS.init = function () {
 	$menu.on("click", function () {
 		$(this).toggleClass("active");
 		$(this).parent().find($nav).toggleClass("active");
+	});
+	$(".curriculum").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#curriculum").offset().top
+		}, 1000);
+		return false;
+	});
+	$(".story").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#story").offset().top
+		}, 1000);
+		return false;
+	});
+	$(".features").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#features").offset().top
+		}, 1000);
+		return false;
+	});
+	$(".contact").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#contact").offset().top
+		}, 1000);
+		return false;
 	});
 	$tool.on("click", function () {
 		$(this).siblings(".tool-info").toggleClass("active");
@@ -86,6 +109,7 @@ MATHS.init = function () {
 		});
 	});
 }
+
 $(function () {
 	MATHS.init();
 });

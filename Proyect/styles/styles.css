@@ -938,8 +938,9 @@ header {
 /* line 62, ../sass/modules/_header.scss */
 .menu.active {
   background-color: transparent;
+  position: fixed;
 }
-/* line 64, ../sass/modules/_header.scss */
+/* line 65, ../sass/modules/_header.scss */
 .menu.active::before {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -951,7 +952,7 @@ header {
   transition: transform .25s .0s, bottom .25s .25s;*/
   bottom: 0;
 }
-/* line 75, ../sass/modules/_header.scss */
+/* line 76, ../sass/modules/_header.scss */
 .menu.active::after {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -964,7 +965,7 @@ header {
   top: 0;
 }
 
-/* line 90, ../sass/modules/_header.scss */
+/* line 91, ../sass/modules/_header.scss */
 .site-nav {
   background-color: #F15A29;
   position: fixed;
@@ -984,30 +985,30 @@ header {
   -ms-transition: all .5s;
   transition: all .5s;
 }
-/* line 108, ../sass/modules/_header.scss */
+/* line 109, ../sass/modules/_header.scss */
 .site-nav.active {
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
 }
-/* line 114, ../sass/modules/_header.scss */
+/* line 115, ../sass/modules/_header.scss */
 .site-nav > li {
   padding: 0;
   text-align: center;
 }
-/* line 117, ../sass/modules/_header.scss */
+/* line 118, ../sass/modules/_header.scss */
 .site-nav > li > a {
   font-weight: 900;
   line-height: 40px;
   display: block;
 }
-/* line 121, ../sass/modules/_header.scss */
+/* line 122, ../sass/modules/_header.scss */
 .site-nav > li > a:hover {
   color: #000;
   background-color: #ca5631;
 }
-/* line 125, ../sass/modules/_header.scss */
+/* line 126, ../sass/modules/_header.scss */
 .site-nav > li > a .icon-mail {
   font-size: 1.5em;
   position: relative;
@@ -1015,21 +1016,21 @@ header {
 }
 
 @media screen and (min-width: 992px) {
-  /* line 139, ../sass/modules/_header.scss */
+  /* line 140, ../sass/modules/_header.scss */
   .site-logo {
     margin: 35px 0 0;
   }
-  /* line 141, ../sass/modules/_header.scss */
+  /* line 142, ../sass/modules/_header.scss */
   .site-logo img {
     width: 190px;
   }
 
-  /* line 145, ../sass/modules/_header.scss */
+  /* line 146, ../sass/modules/_header.scss */
   .menu {
     display: none;
   }
 
-  /* line 148, ../sass/modules/_header.scss */
+  /* line 149, ../sass/modules/_header.scss */
   .site-nav {
     margin: 60px 0 0;
     display: block;
@@ -1045,14 +1046,14 @@ header {
     float: right;
     text-align: right;
   }
-  /* line 162, ../sass/modules/_header.scss */
+  /* line 163, ../sass/modules/_header.scss */
   .site-nav > li {
     display: inline-block;
     margin-left: 12%;
     padding: 0;
     text-align: initial;
   }
-  /* line 167, ../sass/modules/_header.scss */
+  /* line 168, ../sass/modules/_header.scss */
   .site-nav > li a:hover {
     background-color: transparent;
     color: #F15A29;
