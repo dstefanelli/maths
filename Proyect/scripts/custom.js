@@ -29,6 +29,12 @@ MATHS.init = function ( id ) {
 		$(this).toggleClass("active");
 		$(this).parent().find($nav).toggleClass("active");
 	});
+	$(".home").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#home").offset().top
+		}, 1000);
+		return false;
+	});
 	$(".curriculum").click(function() {
 		$('html, body').animate({
 			scrollTop: $("#curriculum").offset().top
