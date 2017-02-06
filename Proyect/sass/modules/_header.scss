@@ -37,10 +37,9 @@ header{
 		-moz-transform: rotate(0deg);
 		-ms-transform: rotate(0deg);
 		transform: rotate(0deg);
-		-webkit-transition: bottom .25s .0s, transform .25s .25s ease;
-		-moz-transition: bottom .25s .0s, transform .25s .25s ease;
-		-ms-transition: bottom .25s .0s, transform .25s .25s ease;
-		transition: bottom .25s .0s, transform .25s .25s ease;
+		transition: transform .25s .0s, bottom .25s .25s;
+		-webkit-transition: transform .25s .0s, bottom .25s .25s;
+		-moz-transition: transform .25s .0s, bottom .25s .25s;
 	}
 	&::after{
 		position: absolute;
@@ -54,10 +53,9 @@ header{
 		-moz-transform: rotate(0deg);
 		-ms-transform: rotate(0deg);
 		transform: rotate(0deg);
-		-webkit-transition: top .25s .0s, transform .25s .25s ease;
-		-moz-transition: top .25s .0s, transform .25s .25s ease;
-		-ms-transition: top .25s .0s, transform .25s .25s ease;
-		transition: top .25s .0s, transform .25s .25s ease;
+		transition: transform .25s .0s, top .25s .25s;
+		-webkit-transition: transform .25s .0s, top .25s .25s;
+		-moz-transition: transform .25s .0s, top .25s .25s;
 	}
 	&.active{
 		background-color: transparent;
@@ -67,21 +65,19 @@ header{
 			-moz-transform: rotate(-45deg);
 			-ms-transform: rotate(-45deg);
 			transform: rotate(-45deg);
-			/*-webkit-transition: transform .25s .0s, bottom .25s .25s;
-			-moz-transition: transform .25s .0s, bottom .25s .25s;
-			-ms-transition: transform .25s .0s, bottom .25s .25s;
-			transition: transform .25s .0s, bottom .25s .25s;*/
+			transition: bottom .25s .0s, transform .25s .25s ease;
+			-webkit-transition: bottom .25s .0s, transform .25s .25s ease;
+			-moz-transition: bottom .25s .0s, transform .25s .25s ease;
 			bottom: 0;
 		}
 		&::after{
 			-webkit-transform: rotate(45deg);
 			-moz-transform: rotate(45deg);
 			-ms-transform: rotate(45deg);
-			transform: rotate(45deg);
-			/*-webkit-transition: transform .25s .0s, top .25s .25s;
-			-moz-transition: transform .25s .0s, top .25s .25s;
-			-ms-transition: transform .25s .0s, top .25s .25s;
-			transition: transform .25s .0s, top .25s .25s;*/
+			transform: rotate(45deg);		
+			transition: top .25s .0s, transform .25s .25s ease;
+			-webkit-transition: top .25s .0s, transform .25s .25s ease;
+			-moz-transition: top .25s .0s, transform .25s .25s ease;
 			top: 0;
 		}
 	}

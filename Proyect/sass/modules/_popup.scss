@@ -27,7 +27,7 @@
 	
 }
 #popup-table{
-	background-color: #414042;
+	background-color: #414042;	
 	.popup-header{
 		p {
 			text-align: center;
@@ -35,6 +35,7 @@
 			text-transform: uppercase;
 			font-size: 17px;
 			font-weight: bold;
+			margin: 0 0 8px;
 		}
 		button{
 			color: $color-sec;
@@ -48,12 +49,66 @@
 	}
 	.popup-content{
 		padding-bottom: 20px;
-		overflow: auto;
-		height: calc(90vh - 120px);
+		overflow: scroll;
+		height: calc(90vh - 80px);
+		z-index: 9999;
+		.row-inner{
+			min-width: 660px;
+		}
 		.table-responsive{
 			width: 100%;
 			overflow-y: hidden;
     		overflow-x: auto;
+		}
+		.table-fixed {
+			display: none;
+			position: fixed;
+			width: 100%;
+			max-width: 1096px;
+			.col12{
+				height: 40px;
+    			background-color: #414042;
+			}
+			.table-header {
+				float: right;
+				display: table;
+				width: 41%;
+				> div{
+					color: #fff;
+					display: table-cell;
+				}
+			}
+			.arrow {
+				float: left;
+				color: #fff;
+				margin-top: 10px;
+				-webkit-animation: 2s soft-blink infinite alternate;
+				animation: 2s soft-blink infinite alternate;
+				.blink-arrow{
+					width: 10px;
+					height: 4px;
+					border-radius: 3px;
+					background-color: white;
+					position: relative;
+					display: inline-block;
+					top: -3px;
+					margin-left: 5px;
+					&::after{
+						content: '';
+						position: absolute;
+						bottom: -5px;
+						right: 0;
+						border-bottom: 4px solid transparent;
+						border-right: 4px solid #fff;
+						border-top: 4px solid #fff;
+						border-left: 4px solid transparent;
+						border-radius: 4px;
+						width: 4px;
+						height: 5px;
+						@include transform(rotate(45deg));
+					}
+				}
+			}
 		}
 		.table{
 			width: 100%;
@@ -61,6 +116,9 @@
 			font-size: 14px;
 			line-height: 36px;
 			font-weight: bold;
+			thead{
+				//color: transparent;
+			}
 			tbody{
 				tr td + td{
 					text-align: center;
@@ -136,8 +194,42 @@
 		}
 	}
 }
-
+@-webkit-keyframes soft-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+@keyframes soft-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
 @media screen and (min-width:768px){
+	#popup-table{
+		.popup-content{
+			.table-fixed {
+				display: block;
+				.arrow {
+					display: none;
+				}
+			}
+			.table thead{
+				color: transparent;
+			}
+		}
+	}
 	#popup-modules{
 		.popup-content{
 			.module-categories{

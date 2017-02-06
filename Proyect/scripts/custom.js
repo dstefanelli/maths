@@ -33,24 +33,33 @@ MATHS.init = function ( id ) {
 		$('html, body').animate({
 			scrollTop: $("#curriculum").offset().top
 		}, 1000);
+		$menu.removeClass("active");
+		$nav.removeClass("active");
 		return false;
+		
 	});
 	$(".story").click(function() {
 		$('html, body').animate({
 			scrollTop: $("#story").offset().top
 		}, 1000);
+		$menu.removeClass("active");
+		$nav.removeClass("active");
 		return false;
 	});
 	$(".features").click(function() {
 		$('html, body').animate({
 			scrollTop: $("#features").offset().top
 		}, 1000);
+		$menu.removeClass("active");
+		$nav.removeClass("active");
 		return false;
 	});
 	$(".contact").click(function() {
 		$('html, body').animate({
 			scrollTop: $("#contact").offset().top
 		}, 1000);
+		$menu.removeClass("active");
+		$nav.removeClass("active");
 		return false;
 	});
 	$tool.on("click", function () {
@@ -67,9 +76,8 @@ MATHS.init = function ( id ) {
 		e.preventDefault();
 		var $this = $(this);
 		var query = $this.data("query");
-		$.get('files/modules.json', {} , function (data) {
-			var myObj = JSON.parse(data);
-			console.log(myObj);
+		$.getJSON('files/modules.json', function(data) {
+			var myObj = data;
 			$(".module-data > div > p").remove();
 			
 			for(var i in myObj.modules) {
@@ -96,13 +104,12 @@ MATHS.init = function ( id ) {
 						
 					for( var i in module.text){
 						$(".module-data > div").append($("<p>" + module.text[i] + "</p>"));
-							console.log(module.text[i])
+							
 					}
-						console.log(module.text.length);
-					
+						
 					$("#popup-modules .module-img").attr("src", '/images/popup-modules/'+ module.imgpath);
 					$("#popup-modules").find(".module-data > h3").text(module.title);
-					console.log("la query es" + query);
+		
 					
 				}
 			}	

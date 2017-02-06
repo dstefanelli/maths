@@ -86,18 +86,24 @@
 /*
 	CURRICULUM
 */
-
+.curriculum-section {
+    background-color: rgba(0, 0, 0, 0.4);
+}
 #curriculum {
-    margin: 0 -10px;
-    padding: 30px 10px;
-    background-color: rgba(0,0,0,.4);
+    margin: 0;
+    padding: 30px 0 0;
     color: #fff;
-	margin-bottom: 30px;
+	margin-bottom: 0;
 	.cv-wrapper.clearfix {
 		margin-bottom: 30px;
 	}
 	h2{
 		color: #fff;
+	}
+	.row{
+		margin: 0;
+		padding: 0 10px;
+		@include box-sizing;
 	}
 	.cv-item{
 		text-align: center;
@@ -107,10 +113,11 @@
 	}
 	.cv-tool{
 		text-align: center;
-		padding: 30px 10px 20px;
+		padding: 30px 9px 20px;
 		border: 1px solid #fff;
 		cursor: pointer;
 		margin-bottom: 30px;
+		background: rgba(0,0,0,.3);
 	}
 	.icon-tools{
 		font-size: 31px;
@@ -133,12 +140,12 @@
 			height: auto;
 			color: #fff;
 			padding: 30px 10px;
-			
+			margin-bottom: 30px;
 		}
 		p{
 			display: initial;
 			position: relative;
-			padding: 0 15px;
+			padding: 0 10px;
 			line-height: 140%;
 			&::before{
 				content: "";
@@ -356,6 +363,9 @@
 		margin-bottom: 15px;
 		display: inline-block;
 	}
+	p{
+		line-height: 170%;
+	}
 }
 
 @media screen and (min-width: 768px){
@@ -365,18 +375,27 @@
 		}
 		p{
 			font-size: 20px;
+			&.blue{
+				margin: 35px 0;
+			}
 		}
 		.btn-cta{
 			width: auto;
     		padding: 0 15px;
 		}
+	
 	}
 }
 
 @media screen and (min-width: 992px){
 	#curriculum {
 		margin: 0 10px 30px;
+		margin: 0 10px 0px;
 		padding: 30px 10px;
+		.row{
+			padding: 0;
+			margin: 0 -10px;
+		}
 		h2{
 			margin-bottom: 35px;
 		}
@@ -404,7 +423,7 @@
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e7e8', endColorstr='#414042',GradientType=1 );
 		.col4{
 			> div {
-				min-height: 260px;
+				min-height: 350px;
 			}
 		}
 		.col4:nth-child(1)::after,
@@ -419,20 +438,28 @@
 	}
 }
 @media screen and (min-width: 1090px){
-	.img-hero{
-		height: 2000px;
-	}
 	.features-bottom{
 		.col4 > div {
-			min-height: 225px;
+			min-height: 341px;
 		}
 		.item-title{
 			font-size: 20px;
 		}
 	}
 }
-@media screen and (min-width: 1360px){
-	.img-hero{
-		height: 2200px;
+@media screen and (min-width: 1120px){
+	
+	.features-bottom{
+		.col4 > div {
+			min-height: 320px;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px){
+	.features-bottom{
+		.col4 > div {
+			min-height: 297px;
+		}
 	}
 }
